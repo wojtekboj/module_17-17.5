@@ -3,12 +3,12 @@ var app = express();
 
 app.use(express.static('assets'));
 
-app.use(function(req, res, next){
+app.use(function (req, res, next) {
     console.log('Hej, jestem pośrednikiem między żądaniem a odpowiedzią!');
     next();
 });
 
-app.use('/store', function(req, res, next){
+app.use('/store', function (req, res, next) {
     console.log('Jestem pośrednikiem przy żądaniu do /store');
     next();
 });
